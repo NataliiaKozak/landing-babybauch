@@ -1,112 +1,54 @@
-.process {
-  position: relative;
+.steps-grid__title {
+  /* ПРЕДПОЛОЖЕНИЕ: заголовок слева как на скрине */
+  margin: 0 0 2.25rem 0;
+  max-width: 600px; /* ПРЕДПОЛОЖЕНИЕ: чтобы переносы были “как в макете” */
 }
 
-.process h2 {
-  text-align: center;
-}
-
-/* Колонка-карточка: растягиваем карточку по высоте колонки */
-.process-step {
-  width: 100%;
+/* Карточки */
+.steps-card {
+  /* ИЗМЕНЕНИЕ: делаем карточки одинаковой высоты и “воздушные” */
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0; /* компактнее чем 20px */
+  padding: 1.5rem 1.5rem;
+  border-radius: 12px;
+
+  /* ПРЕДПОЛОЖЕНИЕ: карточки чуть светлее фона */
+  background: rgba(255, 255, 255, 0.35);
 }
 
-/* (1) Иконка и заголовок на одном уровне */
-.process-step-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem; /* (4) отступ между иконкой и заголовком */
-  margin-bottom: 0.75rem;
+/* Заголовок внутри карточки */
+.steps-card__title {
+  margin: 0 0 0.75rem 0;
 }
 
-.process-icon {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* CTA отступ */
+.steps-grid__cta {
+  margin-top: 2.25rem;
 }
 
-/* (4) Оптимальный размер иконки (без !important) */
-.process-icon img {
-  width: 2rem;
-  height: 2rem;
-  display: block;
-}
+/* ===== Адаптив ===== */
 
-/* (2) Divider  */
-.process-divider {
-  margin-top: auto; /* на одном уровне: прибиваем вниз */
-  padding-top: 1.25rem;
-  border-bottom: 1px solid var(--brand-text);
-  /* max-width: 32.5625rem; 521px */
-  max-width: none;
-  width: 100%;
-}
-
-/* CTA кнопка (как было у тебя) */
-.process .btn-primary-custom {
-  /* min-width: 476px;
-  min-height: 71px;
-  max-width: 100%; */
-  min-width: auto; /* важно: НЕ 476px */
-  min-height: 70px; /* совпадает с твоим глобальным */
-  padding: 0 32px;
-}
-
-/* (5) На уменьшении — всё по центру: заголовки, текст, divider */
+/* <= 991px: 2 колонки (Bootstrap col-md-6 уже делает) */
 @media (max-width: 991px) {
-  .process-step,
-  .process-step h3,
-  .process-step p {
-    text-align: left;
-  }
-
-  .process-step-header {
-    justify-content: flex-start;
-  }
-
-  .process-icon {
-    justify-content: flex-start;
-  }
-  .process-divider {
-    margin-left: auto;
-    margin-right: auto;
-    display: none;
+  .steps-grid__title {
+    max-width: 560px; /* чуть шире, чтобы не было “слишком много” переносов */
   }
 }
 
+/* <= 576–768: 1 колонка + заголовок по центру (по твоей логике: заголовки/кнопки — центр) */
 @media (max-width: 768px) {
-  .process,
-  .process .text-h3 {
-    text-align: center;
+  .steps-grid__title {
+    text-align: center; /* ПРЕДПОЛОЖЕНИЕ: на моб/планшете заголовок лучше по центру */
+    max-width: 100%;
+    margin-bottom: 1.75rem;
   }
 
-  .process-step-header {
-    align-items: center;
-  }
-  .process-icon {
-    justify-content: center;
-  }
-  .process-step {
-    padding: 10px 0; /* если было больше */
-  }
-}
-/* Мелкие экраны — чуть меньше иконка + кнопка во всю ширину */
-@media (max-width: 576px) {
-  .process-icon img {
-    width: 1.75rem;
-    height: 1.75rem;
+  /* ПРЕДПОЛОЖЕНИЕ: текст в карточках остаётся читабельным слева */
+  .steps-card {
+    text-align: left;
+    padding: 1.25rem 1.25rem;
   }
 
-  .process .btn-primary-custom {
-    /* min-width: auto;
-    width: 100%;
-    padding: 0 1.25rem; */
-    padding: 0 24px; /* ещё компактнее на моб */
-    width: auto; /* НЕ растягиваем на 100% */
+  .steps-grid__cta {
+    margin-top: 1.75rem;
   }
 }

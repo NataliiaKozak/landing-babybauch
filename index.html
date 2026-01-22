@@ -13,7 +13,7 @@
     <!-- Security Headers -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net"
     />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta
@@ -56,9 +56,8 @@
     <link href="css/sections/gallery.css" rel="stylesheet" />
     <link href="css/sections/expectations.css" rel="stylesheet" />
     <link href="css/sections/process.css" rel="stylesheet" />
-    <link href="css/sections/fullwidth-image.css" rel="stylesheet" />
+    <link href="css/sections/video.css" rel="stylesheet" />
     <link href="css/sections/faq.css" rel="stylesheet" />
-    <link href="css/sections/services.css" rel="stylesheet" />
     <link href="css/sections/about.css" rel="stylesheet" />
     <link href="css/sections/footer.css" rel="stylesheet" />
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
@@ -111,7 +110,7 @@
 
     <!-- SECTION 2
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  PROMOTIONAL - Промо-секция с изображением слева и текстом справа         ║
+     ║  PROMOTIONAL - Промо-секция          
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="promotional section-padding bg-brand-secondary">
       <div class="container">
@@ -161,7 +160,7 @@
 
     <!-- SECTION 3
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
+     ║  GALLERY - Галерея изображений. Одно фото на ширину экрана                   
      ║                                 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section
@@ -214,7 +213,7 @@
 
     <!-- SECTION 4
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  FEATURES - Секция с описанием и изображениями                            ║
+     ║  FEATURES - Секция с описанием и изображением                             ║
      ║  текст сверху + рамка с фото снизу
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="features section-padding bg-brand-secondary">
@@ -262,8 +261,7 @@
     </section>
 
     <!-- SECTION 5
-   
-╔═══════════════════════════════════════════════════════════════════════════╗
+  ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  expectations - Секция с преимуществами (карточки с иконками) и фото                ║
 ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="expectations section-padding bg-brand-primary">
@@ -274,7 +272,6 @@
           <div class="col-md-6">
             <div class="expectation-item">
               <div class="expectation-photo">
-                <!-- ИЗМЕНЕНИЕ: здесь будет иконка (svg/png) -->
                 <img src="assets/icons/heart.svg" alt="" loading="lazy" />
               </div>
               <p class="text-bold-small mb-0">
@@ -338,128 +335,118 @@
     ║  PROCESS - Секция с шагами/этапами процесса                               ║
     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 
-    <section class="process section-padding bg-brand-secondary">
+    <section class="steps-grid section-padding bg-brand-secondary">
       <div class="container">
-        <!-- Заголовок секции - не надо row mb-3 mb-md-5 align-items-center-->
-        <div class="row mb-5 align-items-center">
-          <div class="col-12">
-            <h2 class="text-h3">Wie genau komme ich zu einem Fotoshooting?</h2>
-          </div>
-        </div>
+        <h2 class="text-h3 steps-grid__title">
+          Wie genau komme ich <br />
+          zum kostenlosen Fotoshooting?
+        </h2>
 
-        <!-- Карточки (используем gap вместо mb-4. можно вместо g-3 - g-2) -->
-        <div class="row g-2 g-md-4">
-          <div class="col-md-6 d-flex">
-            <div class="process-step">
-              <div class="process-step-header">
-                <div class="process-icon">
-                  <img src="assets/icons/check.svg" alt="1. Eintragen" />
-                </div>
-                <h3 class="text-bold-small mb-0">1. Eintragen</h3>
-              </div>
-
-              <p class="text-medium-small mb-3">
+       
+        <div class="row g-4 steps-grid__list">
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">1. Eintragen</h3>
+              <p class="text-medium-small mb-0">
                 Mach das Quiz und beantworte die Fragen, damit wir genügend Zeit
-                für euch einplanen können. Trag dich ein und sichere dir deinen
+                für dich einplanen können. Trag dich ein und sichere dir deinen
                 unschlagbaren Gutschein! Wir melden uns so schnell wie möglich
                 bei dir.
               </p>
-
-              <div class="process-divider"></div>
             </div>
           </div>
 
-          <div class="col-md-6 d-flex">
-            <div class="process-step">
-              <div class="process-step-header">
-                <div class="process-icon">
-                  <img src="assets/icons/check.svg" alt="2. Shootingzeit" />
-                </div>
-                <h3 class="text-bold-small mb-0">2. Shootingzeit</h3>
-              </div>
-
-              <p class="text-medium-small mb-3">
-                Während des Fotoshootings entstehen vielfältige und einzigartige
-                Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure
-                persönlichen Favoriten wählen könnt.
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">2. Outfits</h3>
+              <p class="text-medium-small mb-0">
+                Im Studio erwartet dich eine liebevoll zusammengestellte Auswahl
+                an Outfits, die deinen Babybauch perfekt in Szene setzen. Snacks
+                und Getränke stehen natürlich auch für dich bereit.
               </p>
-
-              <div class="process-divider"></div>
             </div>
           </div>
 
-          <div class="col-md-6 d-flex">
-            <div class="process-step">
-              <div class="process-step-header">
-                <div class="process-icon">
-                  <img
-                    src="assets/icons/check.svg"
-                    alt="3. Wähle dein Lieblingsbild/er aus"
-                  />
-                </div>
-                <h3 class="text-bold-small mb-0">
-                  3. Wähle dein Lieblingsbild/er aus
-                </h3>
-              </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">3. Shootingzeit</h3>
+              <p class="text-medium-small mb-0">
+                Während des Fotoshootings entstehen vielfältige und einzigartige
+                Aufnahmen, sodass du aus einer großen Auswahl deine persönlichen
+                Favoriten wählen kannst. Familien- und Partner sind natürlich
+                inklusive, ganz ohne Aufpreis.
+              </p>
+            </div>
+          </div>
 
-              <p class="text-medium-small mb-3">
-                Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder
-                auswählen und entscheiden, welche ihr erwerben möchtet – ganz
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">
+                4. Wähle dein Lieblingsbild/er aus
+              </h3>
+              <p class="text-medium-small mb-0">
+                Nach dem Shooting kannst du in Ruhe deine Lieblingsbilder
+                auswählen und entscheiden, welche du erwerben möchtest, ganz
                 ohne Kaufzwang.
               </p>
-
-              <div class="process-divider"></div>
             </div>
           </div>
 
-          <div class="col-md-6 d-flex">
-            <div class="process-step">
-              <div class="process-step-header">
-                <div class="process-icon">
-                  <img src="assets/icons/check.svg" alt="4. Ergebnis" />
-                </div>
-                <h3 class="text-bold-small mb-0">4. Ergebnis</h3>
-              </div>
-
-              <p class="text-medium-small mb-3">
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">5. Ergebnis</h3>
+              <p class="text-medium-small mb-0">
                 Unvergängliche Erinnerungen in digitaler Form – jederzeit
-                abrufbar, zum Teilen mit euren Liebsten oder für den besonderen
+                abrufbar, zum Teilen mit deinen Liebsten oder für den besonderen
                 Moment zum Wiedererleben.
               </p>
+            </div>
+          </div>
 
-              <div class="process-divider"></div>
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">6. 0% Rabatt</h3>
+              <p class="text-medium-small mb-0">
+                Bei Buchung deines Babybauch-Fotoshootings erhältst du 10%
+                Rabatt auf das Neugeborenen-Fotoshooting.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- CTA -->
-        <div class="row mt-4">
-          <div class="col-12 text-center">
-            <a href="quiz-1.html" class="btn btn-primary-custom"
-              >Frage stellen</a
-            >
-          </div>
+        <div class="steps-grid__cta text-center">
+          <a href="quiz-1.html" class="btn btn-primary-custom">
+            Jetzt Babybauch-Fotoshooting anfragen
+          </a>
         </div>
       </div>
     </section>
 
     <!-- SECTION 7
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
-     ║  Растягивается на всю ширину экрана (без container)                       ║
+     ║  VIDEO                                                                    ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section
-      class="fullwidth-image bg-brand-secondary"
-      aria-label="Familienfotografie"
-    >
-      <div class="">
-        <div class="fullwidth-image__wrapper">
-          <!-- ОСНОВНОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
-          <img
-            src="assets/images/newborn/foto5.jpg"
-            alt="Babybauchshooting"
-            class="fullwidth-image__img"
-          />
+    <section class="video bg-brand-primary" aria-label="Video">
+      <div class="container">
+        <div class="video__wrapper">
+          <iframe
+            class="video__embed"
+            src="https://www.youtube-nocookie.com/embed/GlvhtH25DP8"
+            title="Maternity photoshoot behind the scenes"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -469,7 +456,7 @@
      ║  FAQ - Часто задаваемые вопросы (аккордеон)                               ║
      ║  Первый вопрос открыт по умолчанию, остальные закрыты                     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="faq section-padding bg-brand-primary">
+    <section class="faq section-padding bg-brand-secondary">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -597,107 +584,6 @@
     </section>
 
     <!-- SECTION 9
-╔═══════════════════════════════════════════════════════════════════════════╗
-║  SERVICES - Секция с отзывами (Swiper.js слайдер)                          ║
-╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="services section-padding bg-brand-secondary">
-      <div class="container">
-        <!-- Заголовок -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <h2 class="text-h3 text-center services-title">
-              Rückmeldung der Eltern
-            </h2>
-          </div>
-        </div>
-
-        <!-- Swiper -->
-        <!-- Swiper WRAP: поля под стрелки -->
-        <div class="services-swiper-wrap">
-          <div class="swiper services-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="service-card">
-                  <div class="service-image mb-3">
-                    <img
-                      src="assets/images/babybauch/foto8.jpg"
-                      alt="Babybauchshooting"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 class="text-bold-small mb-2">Name</h3>
-                  <p class="text-medium-small mb-0">Rückmeldung</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="service-card">
-                  <div class="service-image mb-3">
-                    <img
-                      src="assets/images/babybauch/foto11.jpg"
-                      alt="Babybauchshooting"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 class="text-bold-small mb-2">Name</h3>
-                  <p class="text-medium-small mb-0">Rückmeldung</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="service-card">
-                  <div class="service-image mb-3">
-                    <img
-                      src="assets/images/babybauch/foto1.jpg"
-                      alt="Babybauchshooting"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 class="text-bold-small mb-2">Name</h3>
-                  <p class="text-medium-small mb-0">Rückmeldung</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="service-card">
-                  <div class="service-image mb-3">
-                    <img
-                      src="assets/images/babybauch/foto7.jpeg"
-                      alt="Babybauchshooting"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 class="text-bold-small mb-2">Name</h3>
-                  <p class="text-medium-small mb-0">Rückmeldung</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- точки -->
-            <div class="swiper-pagination services-pagination"></div>
-          </div>
-
-          <!-- стрелки ВНЕ swiper (в полях) -->
-          <div class="swiper-button-prev services-button-prev"></div>
-          <div class="swiper-button-next services-button-next"></div>
-        </div>
-
-        <!-- CTA -->
-        <div class="row mt-4">
-          <div class="col-12 text-center">
-            <a href="quiz-1.html" class="btn btn-primary-custom"
-              >Jetzt anmelden</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 10
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  ABOUT - Секция "О нас" / "О фотографе"                                   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
@@ -763,7 +649,7 @@
       </div>
     </section>
 
-    <!-- SECTION 11
+    <!-- SECTION 10
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FOOTER - Подвал с картой Google Maps                                     ║
      ║  
@@ -791,7 +677,7 @@
       </div>
     </footer>
 
-    <!-- SECTION 12
+    <!-- SECTION 11
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->

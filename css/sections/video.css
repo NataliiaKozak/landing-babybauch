@@ -1,0 +1,41 @@
+/* Full Width Video Section Styles */
+
+.video {
+  width: 100%;
+  overflow: hidden;
+}
+
+.video__wrapper {
+  position: relative;
+}
+
+/* iframe как блок, без рамки */
+.video__embed {
+  width: 100%;
+  max-height: 950px;
+  height: 520px; /* базовая высота (чтобы не было "слишком тонко") */
+  display: block;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .video__embed {
+    max-height: 600px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video__embed {
+    max-height: 500px;
+    height: 360px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .video__embed {
+    max-height: 350px;
+    height: 260px;
+  }
+}
