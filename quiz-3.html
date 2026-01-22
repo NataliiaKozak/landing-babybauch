@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
+      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest"
     />
-    <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
-    <title>Kleiderkollektion - Quiz</title>
+    <meta name="keywords" content="Fotoshooting, Babybauch, kostenlos" />
+    <title>Schwangerschaftswoche - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -32,12 +32,10 @@
     <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
     <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
-
   </head>
   <body>
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
+     ║  QUIZ HEADER 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <header class="quiz-header bg-brand-primary">
       <div class="container">
@@ -56,13 +54,7 @@
           <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              1 Frage bis zur Anfrage 
-            </p>
-          </div>
-
-          <div class="quiz-header__progress">
-            <p class="text-medium-small" style="color: #3d3d3d">
-              Dein Babybauch-Fotoshooting!
+              3 Fragen bis zum Gutschein  
             </p>
           </div>
         </div>
@@ -70,18 +62,16 @@
     </header>
 
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  QUIZ QUESTION    ║
+     ║  QUIZ QUESTION                   
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q3">
+    <section class="quiz-question bg-brand-primary" data-question-id="q2">
       <div class="container">
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__title">
           <h1 class="text-h2" style="color: #000000">
-            Wir bieten eine große Kleiderkollektion an. Gib bitte Bescheid, ob
-            du interessiert bist, damit wir genügend Zeit für den Outfitwechsel
-            einplanen können.
+            In welcher Schwangerschaftswoche bist du aktuell?
           </h1>
         </div>
 
@@ -92,76 +82,78 @@
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto6.jpg"
-                alt="ein Kleid"
+                src="assets/images/babybauch/foto1.jpg"
+                alt="Babybauch-Fotoshooting"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-4.html"
               class="quiz-question__option"
-              data-answer="ein_Kleid"
-              onclick="saveQuizAnswer('q3', 'ein_Kleid')"
+              data-answer="In_den_nächsten_4_Wochen"
+              onclick="saveQuizAnswer('q2', 'In_den_nächsten_4_Wochen')"
             >
               <span class="quiz-question__option-text"
-                >Ich möchte ein Kleid auswählen</span
+                >Unter 20. Woche!</span
               >
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto10.jpg"
-                alt="zwei_Kleider"
+                src="assets/images/babybauch/foto8.jpg"
+                alt="Babybauch-Fotoshooting"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-4.html"
+              class="quiz-question__option"
+              data-answer="In_1-2_Monaten"
+              onclick="saveQuizAnswer('q2', 'In_1-2_Monaten')"
+            >
+              <span class="quiz-question__option-text">20.–30. Woche!</span>
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="assets/images/babybauch/foto1.jpg"
+                alt="Babybauch-Fotoshooting"
+                class="quiz-question__image"
+              />
+            </div>
+            <!-- <a href="quiz-3.html"
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="In_2-3_Monaten"
+           onclick="saveQuizAnswer('q2', 'In_2-3_Monaten')">
+          <span class="quiz-question__option-text">In 2-3 Monaten</span>
+        </a> -->
+            <a
+              href="quiz-4.html"
+              class="quiz-question__option"
+              data-answer="In_2-3_Monaten"
+              onclick="saveQuizAnswer('q2', 'In_2-3_Monaten')"
+            >
+              <span class="quiz-question__option-text">31.–36. Woche</span>
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="assets/images/babybauch/foto8.jpg"
+                alt="Babybauch-Fotoshooting"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-4.html"
               class="quiz-question__option quiz-question__option--multiline"
-              data-answer="zwei_Kleider"
-              onclick="saveQuizAnswer('q3', 'zwei_Kleider')"
+              data-answer="In_mehr_als_3_Monaten"
+              onclick="saveQuizAnswer('q2', 'In_mehr_als_3_Monaten')"
             >
               <span class="quiz-question__option-text"
-                >Ich möchte zwei Kleider auswählen</span
-              >
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="assets/images/babybauch/foto5.jpg"
-                alt="mehrere_auswählen"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-4.html"
-              class="quiz-question__option"
-              data-answer="mehrere_auswählen"
-              onclick="saveQuizAnswer('q3', 'mehrere_auswählen')"
-            >
-              <span class="quiz-question__option-text"
-                >Ich möchte mehrere auswählen!
-              </span>
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="assets/images/babybauch/foto9.jpg"
-                alt="eigenes_Outfit"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-4.html"
-              class="quiz-question__option"
-              data-answer="eigenes_Outfit"
-              onclick="saveQuizAnswer('q3', 'eigenes_Outfit')"
-            >
-              <span class="quiz-question__option-text"
-                >Ich habe eigenes Outfit</span
+                >Noch nicht schwanger / in Planung</span
               >
             </a>
           </div>

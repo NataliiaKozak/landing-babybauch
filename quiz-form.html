@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
+      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest"
     />
-    <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
+    <meta name="keywords" content="Fotoshooting, Babybauch, kostenlos" />
     <title>Jetzt anmelden - Quiz</title>
 
     <!-- Security Headers -->
@@ -42,15 +42,8 @@
     <header class="quiz-header bg-brand-primary">
       <div class="container">
         <div class="quiz-header__content">
-          <!-- ════════════════════════════════════════════════════════════════════════
-           ЛОГОТИП
-           ════════════════════════════════════════════════════════════════════════ -->
           <div class="quiz-header__logo">
-            <a
-              href="index.html"
-              class="quiz-header__logo-text text-bold-big"
-              style="color: #3d3d3d"
-            >
+            <a href="index.html" class="quiz-header__logo-text text-bold-big">
               Logo
             </a>
           </div>
@@ -58,37 +51,36 @@
       </div>
     </header>
 
-    <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  QUIZ FORM - Форма регистрации на фотосессию                               ║
-     ║  Включает: поля ввода, чекбокс согласия, кнопку отправки                   ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
-     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="quiz-form bg-brand-primary">
       <div class="container">
-        <div class="row quiz-form__row-top">
-          <!-- ════════════════════════════════════════════════════════════════════════
-           ЛЕВАЯ КОЛОНКА - Форма
-           ════════════════════════════════════════════════════════════════════════ -->
-          <div class="col-lg-6">
+        <div class="row align-items-start g-5 quiz-form__row-top">
+          <!-- ИЗМЕНЕНИЕ: левая колонка уже (как на макете) -->
+          <div class="col-lg-5">
             <div class="quiz-form__content">
-              <!-- Заголовок -->
-              <div class="quiz-form__header">
-                <h2 class="quiz-form__title text-bold-big">
-                  Du bist fast am Ziel!
-                </h2>
-                <p class="quiz-form__deadline text-medium-small">
-                  Dann fehlt nur noch der letzte Schritt, damit wir uns mit dir
-                  in Verbindung setzen können.
-                </p>
-              </div>
+              <!-- ИЗМЕНЕНИЕ: текст как на скрине -->
+              <p class="quiz-form__kicker text-medium-small mb-2">
+                Klasse, jetzt zum Gutschein
+              </p>
 
-              <!-- Форма -->
+              <h2 class="quiz-form__title text-bold-big mb-3">
+                Trage dich jetzt ein und sichere dir dein
+                <span class="quiz-form__title-strong">KOSTENLOSES</span>
+                Babybauch-Fotoshooting!
+              </h2>
+
+              <p class="text-medium-small mb-2">
+                Jetzt 10 % sparen beim Neugeborenen-Fotoshooting
+              </p>
+              <p class="text-medium-small mb-4">
+                Kostenlose Fotoshootings, begrenzte Plätze.<br />
+                Buchung bis 31.12.2025
+              </p>
+
               <form
                 id="quiz-registration-form"
                 class="quiz-form__form"
                 onsubmit="return submitQuizForm(event);"
               >
-                <!-- Имя -->
                 <div class="quiz-form__field">
                   <input
                     type="text"
@@ -100,7 +92,6 @@
                   />
                 </div>
 
-                <!-- Email -->
                 <div class="quiz-form__field">
                   <input
                     type="email"
@@ -112,7 +103,6 @@
                   />
                 </div>
 
-                <!-- Телефон -->
                 <div class="quiz-form__field">
                   <input
                     type="tel"
@@ -124,25 +114,8 @@
                   />
                 </div>
 
-                <!-- Доступность -->
-                <div class="quiz-form__field">
-                  <select
-                    name="availability"
-                    id="form-availability"
-                    class="quiz-form__input quiz-form__select"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Wann seid ihr erreichbar
-                    </option>
-                    <option value="morgens">Morgens (9-12 Uhr)</option>
-                    <option value="mittags">Mittags (12-15 Uhr)</option>
-                    <option value="nachmittags">Nachmittags (15-18 Uhr)</option>
-                    <option value="abends">Abends (18-20 Uhr)</option>
-                  </select>
-                </div>
+                <!-- ИЗМЕНЕНИЕ: select убран — на макете его нет -->
 
-                <!-- Согласие на обработку данных -->
                 <div class="quiz-form__checkbox-wrapper">
                   <input
                     type="checkbox"
@@ -160,60 +133,33 @@
                       href="datenschutz.html"
                       target="_blank"
                       class="quiz-form__privacy-link"
-                      >Datenschutzbestimmungen</a
+                    >
+                      Datenschutzbestimmungen </a
                     >.
                   </label>
                 </div>
 
-                <!-- Кнопка отправки -->
                 <button
                   type="submit"
                   class="quiz-form__submit btn-primary-custom"
                 >
-                  15% Rabatt - Termin anfragen
+                  Jetzt Gutschein sichern!
                 </button>
               </form>
-
-              <p class="quiz-form__side-text text-medium-small">
-                Deine Sicherheit ist unser größtes Anliegen – Vertraue uns und
-                schütze deine Privatsphäre!
-              </p>
             </div>
           </div>
 
-          <!-- ════════════════════════════════════════════════════════════════════════
-           ПРАВАЯ КОЛОНКА - Изображение и информация
-           ════════════════════════════════════════════════════════════════════════ -->
-          <div class="col-lg-6">
+          <!-- ИЗМЕНЕНИЕ: правая колонка шире (как на макете) -->
+          <div class="col-lg-7">
             <div class="quiz-form__sidebar">
-              <!-- Изображение -->
               <div class="quiz-form__image-wrapper">
                 <img
-                  src="assets/images/newborn/foto8.jpg"
-                  alt="Newborn-Fotoshooting"
+                  src="assets/images/babybauch/foto8.jpg"
+                  alt="Babybauch-Fotoshooting"
                   class="quiz-form__image"
+                  loading="lazy"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
-            <div class="quiz-form__important-block">
-              <!-- был text-bold-small. по шаблонуtext-bold-big -->
-              <p class="quiz-form__important-title text-bold-big">
-                WICHTIG! Bitte halte deinen Termin ein oder informiere mich
-                rechtzeitig über eventuelle Änderungen.
-              </p>
-
-              <p class="quiz-form__important-text text-medium-small">
-                Da unser Zeitplan während des Aktionszeitraums besonders straff
-                ist, planen wir unsere Termine äußerst präzise. Kurzfristige
-                Absagen bedeuten leider, dass andere diese einzigartige
-                Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis
-                und deine Kooperation.
-              </p>
             </div>
           </div>
         </div>
@@ -222,8 +168,7 @@
 
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FOOTER - Подвал с картой Google Maps                                     ║
-     ║  Фон: через CSS класс bg-brand-white (редактируется в css/base-styles.css)   ║
-     ║                                        ║
+     ║     
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <footer class="footer bg-brand-white" id="contact">
       <div class="container-fluid p-0">

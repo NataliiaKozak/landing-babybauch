@@ -1,111 +1,68 @@
-.about {
-  position: relative;
-}
-
 .about-content {
-  max-width: 100%;
+  max-width: 576px;
 }
 
-/* Фото: как в promotional (десктоп — auto) */
+/* ИЗМЕНЕНИЕ: вместо фикс 650x573 — “умная” рамка (меньше на десктопе) */
 .about-photo {
-  width: 100%;
-  max-width: 466px; /* базовая ширина на десктопе (как исходник 466x560) */
-  margin-left: auto; /* в правой колонке будет аккуратно */
-  margin-right: 0;
-}
-
-.about-photo img,
-.about-photo .img-placeholder {
-  display: block;
-  width: 100%;
-  height: auto; /*  десктоп как в promotional */
+  background-color: var(--color-frame-bg, #f8f8f8);
   border-radius: 10px;
+  overflow: hidden; /* ИЗМЕНЕНИЕ: ничего не вылазит */
+
+  width: 100%;
+  max-width: 520px; /* ИЗМЕНЕНИЕ: рамка меньше на десктопе */
+  margin-left: auto; /* остаётся справа */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px 22px 28px; /* ИЗМЕНЕНИЕ: компактнее */
+  gap: 16px; /* ИЗМЕНЕНИЕ: меньше расстояние */
 }
 
-/* divider (если нужен на десктопе) */
-.about .line-divider {
-  border-bottom: 1px solid var(--brand-text);
-  max-width: 471px;
+/* ИЗМЕНЕНИЕ: фото не фиксируем px — оно резиновое и меньше */
+.about-photo img {
+  width: 100%;
+  max-width: 440px; /* ИЗМЕНЕНИЕ: фото меньше внутри рамки */
+  height: auto;
+  aspect-ratio: 551 / 426; /* держим пропорции макета */
+
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center; /* если режет верх — см. ниже */
 }
 
-/* Photo on right - adjust content padding */
-.about .flex-row-reverse .about-content {
-  padding-right: 0;
-  padding-left: 2rem;
+.about-photo p {
+  margin: 0;
+  text-align: center;
+  color: var(--brand-gold, #e2c08d);
 }
 
-.about .flex-row-reverse .about-photo {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* =========================
-   <= 991px — как Hero/Promotional
-   ========================= */
+/* <= 991px: фото сверху, рамка по ширине колонки */
 @media (max-width: 991px) {
-  .about .about-content {
-    text-align: left;
+  .about-content {
+    max-width: none;
   }
 
-  .about .line-divider {
-    display: none; /*  убираем линию на этом размере */
-  }
-
-  .about .text-medium-small {
+  .about-photo {
+    max-width: 650px; /* ИЗМЕНЕНИЕ: можно больше на планшете */
     margin-left: 0;
     margin-right: 0;
+    padding: 24px;
+    gap: 14px;
   }
 
-  /* Фото фиксированное как Hero на планшете */
-  .about-photo {
-    max-width: 240px;
-    margin-inline: auto; /*  по центру, если колонки/стек */
-  }
-
-  .about-photo img,
-  .about-photo .img-placeholder {
-    height: 280px;
-    object-fit: cover;
-    object-position: top center;
+  .about-photo img {
+    max-width: none; /* ИЗМЕНЕНИЕ: фото занимает ширину рамки */
   }
 }
 
-/* =========================
-   <= 768px — только заголовки по центру, основной текст слева
-   ========================= */
-@media (max-width: 768px) {
-  /* фото по центру (размер уже 240/280 из <=991) */
-  .about-photo {
-    margin-bottom: 30px;
-    margin-inline: auto;
-  }
-
-  /* заголовок и подзаголовок по центру */
-  .about .about-content h2,
-  .about .about-content .text-medium-big {
-    text-align: center;
-  }
-
-  /* основной текст слева */
-  .about .about-content .text-medium-small {
-    text-align: left;
-  }
-
-  .about .line-divider {
-    display: none;
-  }
-}
-
-/* =========================
-   <= 576px — как Hero/Promotional (200/240)
-   ========================= */
+/* <= 576px: рамка “на всю видимую ширину”, как в других секциях */
 @media (max-width: 576px) {
   .about-photo {
-    max-width: 200px;
-  }
-
-  .about-photo img,
-  .about-photo .img-placeholder {
-    height: 240px;
+    margin-left: -12px; /* ИЗМЕНЕНИЕ: без calc */
+    margin-right: -12px;
+    max-width: none;
   }
 }

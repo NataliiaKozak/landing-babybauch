@@ -8,7 +8,8 @@
       content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
     />
     <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
-    <title>Wen bringst du mit?  - Quiz</title>
+
+    <title>Hattest du schon mal ein  Babybauch-Fotoshooting? - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -35,8 +36,9 @@
   </head>
   <body>
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  QUIZ HEADER 
+     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+
     <header class="quiz-header bg-brand-primary">
       <div class="container">
         <div class="quiz-header__content">
@@ -54,13 +56,7 @@
           <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Letzte Frage!  
-            </p>
-          </div>
-
-          <div class="quiz-header__progress">
-            <p class="text-medium-small" style="color: #3d3d3d">
-              Dein Babybauch-Fotoshooting!
+              2 Fragen bis zum Gutschein 
             </p>
           </div>
         </div>
@@ -68,97 +64,56 @@
     </header>
 
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  QUIZ QUESTION 
+     ║  QUIZ QUESTION - Секция вопроса с вариантами ответов                       ║
+     ║  Под данный макет   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q4">
+    <section class="quiz-question bg-brand-primary" data-question-id="q1">
       <div class="container">
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__title">
-          <h1 class="text-h2" style="color: #000000">Wen bringst du mit? </h1>
+          <h1 class="text-h2" style="color: #000000">
+            Hattest du schon mal ein  Babybauch-Fotoshooting?
+          </h1>
         </div>
 
         <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-        <div class="quiz-question__cards quiz-question__cards--4">
+        <div class="quiz-question__cards quiz-question__cards--2">
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto11.jpg"
-                alt="allein"
+                src="assets/images/babybauch/foto13.jpg"
+                alt="Babybauch"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-5.html"
               class="quiz-question__option"
-              data-answer="allein"
-              onclick="saveQuizAnswer('q4', 'allein')"
+              data-answer="Ja"
+              onclick="saveQuizAnswer('q1', 'Ja')"
             >
-              <span class="quiz-question__option-text"
-                >Ich komme allein</span
-              >
+              <span class="quiz-question__option-text">Ja, das war der Hammer!</span>
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto7.jpeg"
-                alt="mit_meinem_Partner"
+                src="assets/images/babybauch/foto6.jpg"
+                alt="Babybauch"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-5.html"
               class="quiz-question__option"
-              data-answer="mit_meinem_Partner"
-              onclick="
-                saveQuizAnswer('q4', 'mit_meinem_Partner')
-              "
+              data-answer="Nein"
+              onclick="saveQuizAnswer('q1', 'Nein')"
             >
-              <span class="quiz-question__option-text"
-                >Ich komme mit meinem Partner
-              </span>
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="assets/images/babybauch/foto8.jpg"
-                alt="mit mein/meinen Kindern"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="mit_meinen_Kindern"
-              onclick="saveQuizAnswer('q4', 'mit_meinen_Kindern')"
-            >
-              <span class="quiz-question__option-text"
-                >Ich komme mit mein/meinen Kindern
-              </span>
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="assets/images/babybauch/foto8.jpg"
-                alt="ganzen Familie"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="ganzen_Familie"
-              onclick="saveQuizAnswer('q4', 'ganzen_Familie')"
-            >
-              <span class="quiz-question__option-text"
-                >Ich komme mit meiner ganzen Familie</span
-              >
+              <span class="quiz-question__option-text">Nein, bisher noch nicht!</span>
             </a>
           </div>
         </div>

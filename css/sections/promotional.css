@@ -4,7 +4,7 @@
   position: relative;
 }
 
-/* базово: как на скрине — всё слева */
+
 .promotional .promotional-content {
   max-width: 900px; /* чтобы строки не растягивались на всю ширину */
   text-align: left; /* базовое выравнивание */
@@ -12,10 +12,10 @@
 
 /* можно чуть ограничить ширину текста, чтобы читалось как в макете */
 .promotional .promotional-content p {
-  max-width: 760px;
+  max-width: 900px;
 }
 
-/* кнопка по умолчанию слева (у тебя уже text-start) */
+
 .promotional .promotional-content .col-12.text-start {
   text-align: left;
 }

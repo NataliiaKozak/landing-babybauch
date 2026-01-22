@@ -188,19 +188,6 @@ async function submitToGoogleSheets(data) {
   }
 
   // Подготовка данных для Google Sheets/ изменено в связи с добавлением квизов
-  // const payload = {
-  //   timestamp: data.timestamp,
-  //   name: data.name,
-  //   email: data.email,
-  //   phone: data.phone,
-  //   availability: data.availability,
-  //   privacy_accepted: data.privacy ? 'Ja' : 'Nein',
-  //   q1_kennst: data.quizAnswers?.q1 || '',
-  //   q2_bild: data.quizAnswers?.q2 || '',
-  //   q3_experience: data.quizAnswers?.q3 || '',
-  //   q4_wer: data.quizAnswers?.q4 || '',
-  //   quiz_start_time: data.quizStartTime || ''
-  // };
   const payload = {
     timestamp: data.timestamp,
     name: data.name,
@@ -215,11 +202,6 @@ async function submitToGoogleSheets(data) {
     q4_wen: data.quizAnswers?.q4 || '',
 
     q5_kennst: data.quizAnswers?.q5 || '',
-    q6_baby_schon: data.quizAnswers?.q6 || '',
-    q7_alt: data.quizAnswers?.q7 || '',
-    q8_momente: data.quizAnswers?.q8 || '',
-    q9_wen: data.quizAnswers?.q9 || '',
-    q10_termin_newborn: data.quizAnswers?.q10 || '',
 
     quiz_start_time: data.quizStartTime || '',
   };

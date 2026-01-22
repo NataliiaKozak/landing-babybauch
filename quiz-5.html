@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
+      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest"
     />
-    <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
-
-    <title>Kennst du uns bereits? - Quiz</title>
+    <meta name="keywords" content="Fotoshooting, Babybauch, kostenlos" />
+    <title>Kommst du allein oder mit Begleitung?  - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -33,13 +32,11 @@
     <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
     <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
-
   </head>
   <body>
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  QUIZ HEADER
+     ║  QUIZ HEADER 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-
     <header class="quiz-header bg-brand-primary">
       <div class="container">
         <div class="quiz-header__content">
@@ -57,15 +54,9 @@
           <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Weiter zum unverbindlichen Angebot  
+              Fast geschafft  
             </p>
           </div>
-
-          <!-- <div class="quiz-header__progress">
-            <p class="text-medium-small" style="color: #3d3d3d">
-              Jetzt Termin anfragen & profitieren!
-            </p>
-          </div> -->
         </div>
       </div>
     </header>
@@ -73,87 +64,74 @@
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  QUIZ QUESTION 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q1">
+    <section class="quiz-question bg-brand-primary" data-question-id="q4">
       <div class="container">
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__title">
           <h1 class="text-h2" style="color: #000000">
-            Kennst du uns bereits? 
+            Kommst du allein oder mit Begleitung? 
           </h1>
         </div>
 
         <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-        <div class="quiz-question__cards quiz-question__cards--4">
+        <div class="quiz-question__cards quiz-question__cards--3">
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
                 src="assets/images/babybauch/foto11.jpg"
-                alt="Ja, na klar!"
+                alt="allein"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-form.html"
               class="quiz-question__option"
-              data-answer="na_klar"
-              onclick="saveQuizAnswer('q1', 'na_klar')"
+              data-answer="allein"
+              onclick="saveQuizAnswer('q4', 'allein')"
             >
-              <span class="quiz-question__option-text">Ja, na klar!</span>
+              <span class="quiz-question__option-text">Ich komme allein</span>
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto1.jpg"
-                alt="Ja, vom Hören"
+                src="assets/images/babybauch/foto7.jpeg"
+                alt="mit_meinem_Partner"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-form.html"
               class="quiz-question__option"
-              data-answer="vom_hoeren"
-              onclick="saveQuizAnswer('q1', 'vom_hoeren')"
+              data-answer="mit_meinem_Partner"
+              onclick="saveQuizAnswer('q4', 'mit_meinem_Partner')"
             >
-              <span class="quiz-question__option-text">Ja, vom Hören</span>
+              <span class="quiz-question__option-text"
+                >Ich komme mit meinem Partner
+              </span>
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto11.jpg"
-                alt="Schon sehr lang"
+                src="assets/images/babybauch/foto8.jpg"
+                alt="mit mein/meinen Kindern"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-form.html"
               class="quiz-question__option"
-              data-answer="sehr_lang"
-              onclick="saveQuizAnswer('q1', 'sehr_lang')"
+              data-answer="mit_meinen_Kindern"
+              onclick="saveQuizAnswer('q4', 'mit_meinen_Kindern')"
             >
-              <span class="quiz-question__option-text">Schon sehr lang</span>
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="assets/images/babybauch/foto1.jpg"
-                alt="Nein, noch nicht"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-form.html"
-              class="quiz-question__option"
-              data-answer="noch_nicht"
-              onclick="saveQuizAnswer('q1', 'noch_nicht')"
-            >
-              <span class="quiz-question__option-text">Nein, noch nicht</span>
+              <span class="quiz-question__option-text"
+                >Mit Partner und Kind
+              </span>
             </a>
           </div>
         </div>
