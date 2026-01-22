@@ -1,0 +1,64 @@
+/* ============================================================================
+   QUIZ HEADER - Шапка страницы квиза
+   ============================================================================ */
+
+.quiz-header {
+  padding: 24px 0 8px 0; /* компактнее */
+  min-height: auto;
+}
+
+.quiz-header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* было 40/80 */
+  align-items: flex-start;
+}
+
+/* Logo */
+.quiz-header__logo {
+  margin: 0; /* было 0 0 10px 0 */
+}
+
+.quiz-header__logo-text {
+  font-size: var(--font-h2); /* 45px */
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  color: var(--brand-text);
+  transition: opacity 0.3s ease;
+}
+
+.quiz-header__logo-text:hover {
+  opacity: 0.8;
+}
+
+.quiz-header__logo-img {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Progress text */
+.quiz-header__progress {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.quiz-header__progress p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: var(--font-body);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .quiz-header {
+    padding: 18px 0 6px 0;
+  }
+
+  .quiz-header__content {
+    gap: 10px;
+  }
+}

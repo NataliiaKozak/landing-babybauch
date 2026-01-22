@@ -1,0 +1,57 @@
+/* Promotional — text-only (Project 2) */
+
+.promotional {
+  position: relative;
+}
+
+/* базово: как на скрине — всё слева */
+.promotional .promotional-content {
+  max-width: 900px; /* чтобы строки не растягивались на всю ширину */
+  text-align: left; /* базовое выравнивание */
+}
+
+/* можно чуть ограничить ширину текста, чтобы читалось как в макете */
+.promotional .promotional-content p {
+  max-width: 760px;
+}
+
+/* кнопка по умолчанию слева (у тебя уже text-start) */
+.promotional .promotional-content .col-12.text-start {
+  text-align: left;
+}
+
+/* --- Адаптив: как ты описывала логику ---
+   заголовок + кнопка по центру,
+   основной текст слева
+*/
+@media (max-width: 991px) {
+  /* НЕ центрируем всё подряд */
+  .promotional .promotional-content {
+    text-align: left;
+  }
+
+  /* заголовок по центру */
+  .promotional .promotional-content h2 {
+    text-align: center;
+  }
+
+  /* кнопка по центру */
+  .promotional .promotional-content .col-12.text-start {
+    text-align: center !important;
+  }
+
+  /* основной текст остаётся слева */
+  .promotional .promotional-content p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* моб: можно сделать кнопку аккуратнее (по желанию) */
+@media (max-width: 576px) {
+  .promotional .btn.btn-primary-custom {
+    display: inline-block;
+    max-width: 100%;
+  }
+}

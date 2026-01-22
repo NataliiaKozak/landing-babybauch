@@ -1,0 +1,146 @@
+/* ИЗМЕНЕНИЕ: секция не обрезает стрелки */
+.gallery {
+  position: relative;
+  overflow: visible;
+}
+
+/* ИЗМЕНЕНИЕ: контейнер — опорная точка для стрелок */
+.gallery > .container {
+  position: relative;
+}
+
+/* WRAP */
+.gallery-swiper-wrap {
+  position: relative;
+  overflow: visible; /* ИЗМЕНЕНИЕ: чтобы стрелки могли быть "снаружи" */
+}
+
+/* ИЗМЕНЕНИЕ: Swiper-оболочка остаётся, но мы не используем Swiper-движок */
+.gallery-swiper {
+  width: 100%;
+  overflow: hidden; /* ИЗМЕНЕНИЕ: чтобы точно не было "кусочков" */
+  padding: 0; /* ИЗМЕНЕНИЕ */
+}
+
+/* Item */
+.gallery-item {
+  width: 100%;
+}
+
+/* ИЗМЕНЕНИЕ: делаем фото выше, чтобы помещались более “высокие” кадры */
+.gallery-item img,
+.gallery-item .img-placeholder {
+  display: block;
+  width: 100%;
+  height: 800px; /* ИЗМЕНЕНИЕ: увеличили высоту */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ИЗМЕНЕНИЕ: точки не нужны (как на макете) */
+.gallery-swiper .swiper-pagination {
+  display: none;
+}
+
+/* =========================
+   ARROWS (вне фото)
+   ========================= */
+
+/* ИЗМЕНЕНИЕ: полностью переопределяем стрелки (без Swiper-позиционирования) */
+.gallery-swiper-wrap .swiper-button-prev,
+.gallery-swiper-wrap .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  background: transparent;
+  color: #3d3d3d;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* чтобы не было дефолтных стилей Swiper */
+  margin: 0;
+}
+
+.gallery-swiper-wrap .swiper-button-prev {
+  left: -46px; /* ИЗМЕНЕНИЕ: стрелка в боковом поле (как в примере “Landing 3”) */
+}
+
+.gallery-swiper-wrap .swiper-button-next {
+  right: -46px; /* ИЗМЕНЕНИЕ */
+}
+
+.gallery-swiper-wrap .swiper-button-prev:hover,
+.gallery-swiper-wrap .swiper-button-next:hover {
+  color: #e2c08d;
+}
+
+/* ИЗМЕНЕНИЕ: заменяем дефолтные иконки */
+.gallery-swiper-wrap .swiper-button-prev::after,
+.gallery-swiper-wrap .swiper-button-next::after {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.gallery-swiper-wrap .swiper-button-prev::after {
+  content: '←';
+}
+
+.gallery-swiper-wrap .swiper-button-next::after {
+  content: '→';
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* ИЗМЕНЕНИЕ: на 991 фото ниже, стрелки ближе (чтобы не вылезали слишком далеко) */
+@media (max-width: 991px) {
+  .gallery-item img,
+  .gallery-item .img-placeholder {
+    height: 420px; /* ИЗМЕНЕНИЕ */
+  }
+
+  .gallery-swiper-wrap .swiper-button-prev {
+    left: -26px; /* ИЗМЕНЕНИЕ */
+  }
+
+  .gallery-swiper-wrap .swiper-button-next {
+    right: -26px; /* ИЗМЕНЕНИЕ */
+  }
+}
+
+/* ИЗМЕНЕНИЕ: на <=768 стрелки убираем (свайп), фото можно “на всю видимую ширину” */
+@media (max-width: 768px) {
+  .gallery > .container {
+    padding-left: 0; /* ИЗМЕНЕНИЕ: на моб/планшете фото шире */
+    padding-right: 0; /* ИЗМЕНЕНИЕ */
+  }
+
+  .gallery-item img,
+  .gallery-item .img-placeholder {
+    height: 340px; /* ИЗМЕНЕНИЕ */
+    border-radius: 10px; /* если захочешь “в край” — можно сделать 0 */
+  }
+
+  .gallery-swiper-wrap .swiper-button-prev,
+  .gallery-swiper-wrap .swiper-button-next {
+    display: none; /* ИЗМЕНЕНИЕ */
+  }
+}
+
+/* Моб */
+@media (max-width: 576px) {
+  .gallery-item img,
+  .gallery-item .img-placeholder {
+    height: 300px; /* ИЗМЕНЕНИЕ */
+  }
+}

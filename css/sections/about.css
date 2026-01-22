@@ -1,0 +1,111 @@
+.about {
+  position: relative;
+}
+
+.about-content {
+  max-width: 100%;
+}
+
+/* Фото: как в promotional (десктоп — auto) */
+.about-photo {
+  width: 100%;
+  max-width: 466px; /* базовая ширина на десктопе (как исходник 466x560) */
+  margin-left: auto; /* в правой колонке будет аккуратно */
+  margin-right: 0;
+}
+
+.about-photo img,
+.about-photo .img-placeholder {
+  display: block;
+  width: 100%;
+  height: auto; /*  десктоп как в promotional */
+  border-radius: 10px;
+}
+
+/* divider (если нужен на десктопе) */
+.about .line-divider {
+  border-bottom: 1px solid var(--brand-text);
+  max-width: 471px;
+}
+
+/* Photo on right - adjust content padding */
+.about .flex-row-reverse .about-content {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+.about .flex-row-reverse .about-photo {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* =========================
+   <= 991px — как Hero/Promotional
+   ========================= */
+@media (max-width: 991px) {
+  .about .about-content {
+    text-align: left;
+  }
+
+  .about .line-divider {
+    display: none; /*  убираем линию на этом размере */
+  }
+
+  .about .text-medium-small {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Фото фиксированное как Hero на планшете */
+  .about-photo {
+    max-width: 240px;
+    margin-inline: auto; /*  по центру, если колонки/стек */
+  }
+
+  .about-photo img,
+  .about-photo .img-placeholder {
+    height: 280px;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+/* =========================
+   <= 768px — только заголовки по центру, основной текст слева
+   ========================= */
+@media (max-width: 768px) {
+  /* фото по центру (размер уже 240/280 из <=991) */
+  .about-photo {
+    margin-bottom: 30px;
+    margin-inline: auto;
+  }
+
+  /* заголовок и подзаголовок по центру */
+  .about .about-content h2,
+  .about .about-content .text-medium-big {
+    text-align: center;
+  }
+
+  /* основной текст слева */
+  .about .about-content .text-medium-small {
+    text-align: left;
+  }
+
+  .about .line-divider {
+    display: none;
+  }
+}
+
+/* =========================
+   <= 576px — как Hero/Promotional (200/240)
+   ========================= */
+@media (max-width: 576px) {
+  .about-photo {
+    max-width: 200px;
+  }
+
+  .about-photo img,
+  .about-photo .img-placeholder {
+    height: 240px;
+  }
+}

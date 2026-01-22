@@ -1,0 +1,112 @@
+.process {
+  position: relative;
+}
+
+.process h2 {
+  text-align: center;
+}
+
+/* Колонка-карточка: растягиваем карточку по высоте колонки */
+.process-step {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0; /* компактнее чем 20px */
+}
+
+/* (1) Иконка и заголовок на одном уровне */
+.process-step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* (4) отступ между иконкой и заголовком */
+  margin-bottom: 0.75rem;
+}
+
+.process-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* (4) Оптимальный размер иконки (без !important) */
+.process-icon img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+/* (2) Divider  */
+.process-divider {
+  margin-top: auto; /* на одном уровне: прибиваем вниз */
+  padding-top: 1.25rem;
+  border-bottom: 1px solid var(--brand-text);
+  /* max-width: 32.5625rem; 521px */
+  max-width: none;
+  width: 100%;
+}
+
+/* CTA кнопка (как было у тебя) */
+.process .btn-primary-custom {
+  /* min-width: 476px;
+  min-height: 71px;
+  max-width: 100%; */
+  min-width: auto; /* важно: НЕ 476px */
+  min-height: 70px; /* совпадает с твоим глобальным */
+  padding: 0 32px;
+}
+
+/* (5) На уменьшении — всё по центру: заголовки, текст, divider */
+@media (max-width: 991px) {
+  .process-step,
+  .process-step h3,
+  .process-step p {
+    text-align: left;
+  }
+
+  .process-step-header {
+    justify-content: flex-start;
+  }
+
+  .process-icon {
+    justify-content: flex-start;
+  }
+  .process-divider {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .process,
+  .process .text-h3 {
+    text-align: center;
+  }
+
+  .process-step-header {
+    align-items: center;
+  }
+  .process-icon {
+    justify-content: center;
+  }
+  .process-step {
+    padding: 10px 0; /* если было больше */
+  }
+}
+/* Мелкие экраны — чуть меньше иконка + кнопка во всю ширину */
+@media (max-width: 576px) {
+  .process-icon img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .process .btn-primary-custom {
+    /* min-width: auto;
+    width: 100%;
+    padding: 0 1.25rem; */
+    padding: 0 24px; /* ещё компактнее на моб */
+    width: auto; /* НЕ растягиваем на 100% */
+  }
+}
