@@ -41,38 +41,51 @@
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <header class="quiz-header bg-brand-primary">
       <div class="container">
-        <div class="quiz-header__content">
-          <div class="quiz-header__logo">
-            <a href="index.html" class="quiz-header__logo-text text-bold-big">
-              Logo
-            </a>
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="quiz-header__content">
+              <div class="quiz-header__logo">
+                <a href="index.html" class="quiz-header__logo-text text-h2"
+                  >Logo</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
+    <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ FORM - Форма регистрации на фотосессию                               ║
+     ║  Включает: поля ввода, чекбокс согласия, кнопку отправки                   ║
+     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="quiz-form bg-brand-primary">
       <div class="container">
-        <div class="row align-items-start g-5 quiz-form__row-top">
-          <!-- ИЗМЕНЕНИЕ: левая колонка уже (как на макете) -->
-          <div class="col-lg-5">
+        <div class="row quiz-form__row-top align-items-start g-4">
+          <!-- LEFT: текст + форма -->
+          <div class="col-lg-5 order-2 order-lg-1">
             <div class="quiz-form__content">
-              <!-- ИЗМЕНЕНИЕ: текст как на скрине -->
-              <p class="quiz-form__kicker text-medium-small mb-2">
+              <p class="quiz-form__label text-medium-small">
                 Klasse, jetzt zum Gutschein
               </p>
 
-              <h2 class="quiz-form__title text-bold-big mb-3">
-                Trage dich jetzt ein und sichere dir dein
-                <span class="quiz-form__title-strong">KOSTENLOSES</span>
-                Babybauch-Fotoshooting!
-              </h2>
+              <!-- переносы как на скрине -->
+              <p class="quiz-form__headline text-bold-big">
+                <span class="d-block">Trage dich jetzt ein und sichere</span>
+                <span class="d-block">dir dein</span>
+                <span class="d-block quiz-form__headline-accent"
+                  >KOSTENLOSES</span
+                >
+                <span class="d-block">Babybauch-Fotoshooting!</span>
+              </p>
 
-              <p class="text-medium-small mb-2">
+              <p class="quiz-form__text text-medium-small">
                 Jetzt 10 % sparen beim Neugeborenen-Fotoshooting
               </p>
-              <p class="text-medium-small mb-4">
-                Kostenlose Fotoshootings, begrenzte Plätze.<br />
+
+              <p class="quiz-form__text text-medium-small">
+                Kostenlose Shootings, begrenzte Plätze.<br />
                 Buchung bis 31.12.2025
               </p>
 
@@ -114,8 +127,6 @@
                   />
                 </div>
 
-                <!-- ИЗМЕНЕНИЕ: select убран — на макете его нет -->
-
                 <div class="quiz-form__checkbox-wrapper">
                   <input
                     type="checkbox"
@@ -149,8 +160,8 @@
             </div>
           </div>
 
-          <!-- ИЗМЕНЕНИЕ: правая колонка шире (как на макете) -->
-          <div class="col-lg-7">
+          <!-- RIGHT: фото -->
+          <div class="col-lg-6 order-1 order-lg-2">
             <div class="quiz-form__sidebar">
               <div class="quiz-form__image-wrapper">
                 <img
@@ -168,7 +179,8 @@
 
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FOOTER - Подвал с картой Google Maps                                     ║
-     ║     
+     ║  Фон: через CSS класс bg-brand-white (редактируется в css/base-styles.css)   ║
+     ║                                        ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <footer class="footer bg-brand-white" id="contact">
       <div class="container-fluid p-0">
