@@ -6,15 +6,14 @@
   max-width: 100%;
 }
 
-/* больше расстояние под заголовком */
 .features-content h2 {
-  margin-bottom: 24px; /* было визуально тесно */
+  margin-bottom: 24px; 
 }
 
 .features-content .text-medium-small {
   max-width: 560px;
-  margin-bottom: 16px; /* увеличили */
-  line-height: 1.55; /* чуть комфортнее читается */
+  margin-bottom: 16px; 
+  line-height: 1.55; 
 }
 
 /* последний абзац без лишнего отступа вниз */
@@ -22,35 +21,32 @@
   margin-bottom: 0;
 }
 
-/* ИЗМЕНЕНИЕ: рамка широкая, по центру, с большими внутренними отступами */
+/* рамка широкая, по центру, с большими внутренними отступами */
 .features-frame {
   background-color: var(--color-frame-bg);
   border-radius: 10px;
 
   max-width: 100%;
-  margin: 48px auto 0; /* было справа — стало по центру */
+  margin: 48px auto 0; 
 
-  padding: 56px 62px 40px 62px; /* ближе к визуалу со скрина (большая “рамка”) */
+  padding: 56px 62px 40px 62px; 
 }
 
-/* ИЗМЕНЕНИЕ: убрали фикс. высоту и cover — чтобы высокие фото НЕ резались */
+/*  убрали фикс. высоту и cover — чтобы высокие фото НЕ резались */
 .features-frame__img {
   display: block;
   width: 100%;
-  height: auto; /* ключевое: фото не обрезается */
+  height: auto; /*  не обрезается */
   border-radius: 10px;
 }
 
-/* ИЗМЕНЕНИЕ: подпись внизу по центру и золотая */
 .features-frame .text-medium-small {
   margin-top: 22px;
   text-align: center;
   color: var(--brand-gold, #e2c08d);
 }
 
-/* =========================
-   <= 991px (планшет и ниже)
-   ========================= */
+
 @media (max-width: 991px) {
   .features-frame {
     margin-top: 36px;
@@ -74,11 +70,9 @@
   }
 }
 
-/* =========================
-   <= 576px (моб)
-   ========================= */
+
 @media (max-width: 576px) {
-  /* ИЗМЕНЕНИЕ: фото на всю видимую ширину экрана (full-bleed) без calc */
+
   .features-frame {
     background: transparent; /* чтобы не мешало full-width фото */
     padding: 0;
@@ -86,15 +80,14 @@
 
     margin-top: 24px;
     margin-left: -0.75rem; /* компенсируем padding контейнера Bootstrap */
-    margin-right: -0.75rem; /* простой вариант без calc */
+    margin-right: -0.75rem; 
   }
 
   .features-frame__img {
-    border-radius: 0; /* чтобы реально “в край” */
+    border-radius: 0; 
   }
 
-  /* подпись оставляем с небольшим верхним отступом */
-  .features-frame .text-medium-small {
+    .features-frame .text-medium-small {
     padding-top: 12px;
   }
 }

@@ -12,27 +12,25 @@
   gap: 1.25rem;
 }
 
-/* маленькие ИКОНКИ вместо фото */
 .expectation-photo {
   width: 44px;
   height: 44px;
   flex: 0 0 44px;
 
-  /* ИЗМЕНЕНИЕ: делаем “плашку” под иконку как на макете */
+  /*  “плашку” под иконку как на макете */
   background: var(--color-frame-bg);
   border-radius: 0;
   overflow: hidden;
 
-  display: flex; /* ИЗМЕНЕНИЕ */
-  align-items: center; /* ИЗМЕНЕНИЕ */
-  justify-content: center; /* ИЗМЕНЕНИЕ */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 
   margin-top: 2px;
 }
 
 .expectation-photo img {
-  /* ИЗМЕНЕНИЕ: это иконка, не фото → не режем */
-  width: 24px;
+   width: 24px;
   height: 24px;
   display: block;
   object-fit: contain;
@@ -41,7 +39,7 @@
 /* большое фото */
 .expectations-media-img {
   width: 100%;
-  height: 800px; /* как было, чтобы высокие фото помещались */
+  height: 800px; 
   display: block;
   object-fit: cover;
   object-position: center;
@@ -69,8 +67,7 @@
   }
 }
 
-/* ИЗМЕНЕНИЕ: “фото на всю видимую ширину экрана” на телефоне
-   (без магических -12px, под Bootstrap container) */
+
 @media (max-width: 576px) {
   .expectations-media-wrap {
     margin-left: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
@@ -79,6 +76,6 @@
 
   .expectations-media-img {
     height: 280px;
-    border-radius: 10px; /* можно 0, если нужно прям “в край” */
+    border-radius: 10px; 
   }
 }

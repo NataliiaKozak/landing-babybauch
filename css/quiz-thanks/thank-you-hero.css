@@ -2,192 +2,99 @@
    THANK YOU HERO - Страница благодарности
    ============================================================================ */
 
+/* Секция */
 .thank-you-hero {
-  padding: 80px 0 100px 0;
-}
-/* для секции bg-brand-secondary — отдельные отступы как у тебя */
-.thank-you-hero.bg-brand-secondary {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding: 50px 0 60px;
 }
 
-/* Текст: оставляем только отступы/ограничения ширины. Размеры/веса задаются через .text-bold-big/.text-medium-small в HTML */
-.thank-you-hero__subtitle {
-  /* margin: 0 0 10px 0; */
-  margin-bottom: 1rem;
-}
-.thank-you-hero__description {
-  line-height: 1.5;
-  margin: 0 0 30px 0;
-  /* max-width: 453px; */
-}
-/* .thank-you-hero__description p {
-  margin: 0 0 15px 0;
-} */
-/* .thank-you-hero__description p:last-child {
-  margin-bottom: 0;
-} 
-  
-Контент в левой колонке (как было) */
 .thank-you-hero__content {
-  max-width: 520px; /* margin-left: auto; */
-  margin-left: 0; /* margin-right: auto; */
-  margin-right: 0;
+  max-width: 520px;
 }
 
-/* Secondary buttons */
-.thank-you-hero__secondary-buttons {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
+.thank-you-hero__title {
+  margin: 0 0 16px;
 }
 
-/* Кнопки: используем переменные, убираем font-family (он глобальный) */
-.thank-you-hero__btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 100px;
-  height: 50px;
-  padding: 10px 20px;
-  font-size: var(--font-body); /* = было 22px в tokens.стало 16 */
-  font-weight: var(--font-weight-medium);
-  color: var(--color-black); /* background-color: var(--brand-accent); */
-  border: 1px solid var(--color-black);
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.thank-you-hero__description {
+  margin: 0 0 16px;
+  line-height: var(--line-height-normal);
 }
-.thank-you-hero__btn-secondary:hover {
-  background-color: rgba(226, 192, 141, 0.2);
-  border-color: var(--brand-accent);
-  transform: translateY(-2px);
-} /* Image base */
+
+.thank-you-hero__desc-after {
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+/* Фото справа */
 .thank-you-hero__image-wrapper {
   width: 100%;
+  height: 360px;
   overflow: hidden;
   border-radius: 10px;
 }
+
 .thank-you-hero__image {
   width: 100%;
-  height: 100%; /* width: 550px; height: 296px; */
-  object-fit: cover;
-}
-
-/* 2 фото 50/50 в верхней части (там где у тебя section.author-footer bg-brand-primary) */
-.author-footer.bg-brand-primary .thank-you-hero__image-wrapper {
-  height: 300px;
-}
-
-/* Чтобы правый столбец растягивался по высоте левого (и height:100% реально работал) */
-.thank-you-hero__row-top {
-  align-items: stretch;
-} /* ВАЖНО: применяем flex только к правой колонке (последней) */
-/* .thank-you-hero__row-top > .col-lg-6:last-child {
-  display: flex;
-} */
-/* .thank-you-hero__row-top > .col-lg-6:last-child .thank-you-hero__image-wrapper {
-  flex: 1;
-} Большое фото справа в секции bg-brand-secondary */
-
-.thank-you-hero.bg-brand-secondary .thank-you-hero__image-wrapper {
-  /* max-width: 550px; height: 100%; margin-left: auto; */
-  max-width: 100%;
   height: 100%;
-  margin-left: auto;
+  object-fit: cover;
+  display: block;
 }
-/* ============================================================================ СОЦ-ИКОНКИ (ВАЖНО!) УДАЛЕНО: глобальное .author-footer__social {...} и .author-footer__social-link {...} Теперь мы оверрайдим только внутри thank-you-hero, чтобы не ломать author-footer везде. ============================================================================ */
-.thank-you-hero .author-footer__social {
+
+.thank-you-hero .btn-primary-custom {
+  min-height: 36px; /* было 70 */
+  padding: 0 16px; /* компактно */
+  font-weight: var(--font-weight-medium);
+}
+
+.thank-you-hero .btn-primary-custom:hover {
+  box-shadow: none;
+}
+
+/* убрать подчёркивание у ссылок-кнопок */
+.thank-you-hero .btn-primary-custom,
+.thank-you-hero .btn-outline-custom {
+  text-decoration: none;
+}
+
+.thank-you-hero .btn-primary-custom:hover,
+.thank-you-hero .btn-outline-custom:hover {
+  text-decoration: none;
+}
+.thank-you-hero__secondary-buttons {
   display: flex;
-  gap: 10px;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-top: 12px;
-} /* размер иконок на thank-you (переопределяем базу 50x50 из sections/author-footer.css) */
-.thank-you-hero .author-footer__social-link {
-  width: 30px;
-  height: 30px;
-} /* Отступ между иконками и большим фото — ставим контейнеру, а НЕ каждой иконке */
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* outline тоже компактнее */
+.thank-you-hero .btn-outline-custom {
+  min-height: 32px;
+  padding: 0 14px;
+}
+
+/* Responsive */
 @media (max-width: 991px) {
-  .thank-you-hero .author-footer__social {
-    justify-content: center;
-    margin-bottom: 28px; /* было на .author-footer__social-link — это было неправильное место */
-  }
-} /* ============================================================================ RESPONSIVE ============================================================================ */
-@media (max-width: 991px) {
-  .thank-you-hero {
-    padding: 60px 0 80px 0;
-  }
   .thank-you-hero__content {
     margin-inline: auto;
-    text-align: center;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto; /* НЕ центрируем */
+    text-align: left;
   }
+
   .thank-you-hero__secondary-buttons {
-    justify-content: center;
+    justify-content: flex-start;
   }
-  .thank-you-hero.bg-brand-secondary .thank-you-hero__image-wrapper {
-    /* max-width: 360px; */
-    max-width: 100%;
+
+  .thank-you-hero__image-wrapper {
     height: 320px;
-    margin-inline: auto;
-  }
-  .author-footer.bg-brand-primary .thank-you-hero__image-wrapper {
-    height: 240px;
-  }
-  .thank-you-hero__description {
-    margin-inline: auto;
-  } /* размеры иконок на tablet */
-  .thank-you-hero.bg-brand-secondary .author-footer__social-link {
-    width: 44px;
-    height: 44px;
+    margin-left: 0;
+    margin-right: auto;
   }
 }
-@media (max-width: 768px) {
-  .thank-you-hero {
-    padding: 40px 0 60px 0;
-  } /* размеры текста на мобилках уже регулируются .text-* в common.css, поэтому тут НЕ дублируем font-size для description/subtitle */
-  .thank-you-hero__btn-secondary {
-    min-width: 140px;
-    height: 56px;
-    font-size: 16px;
-  }
-  .thank-you-hero.bg-brand-secondary .thank-you-hero__image-wrapper {
-    /* max-width: 320px; */
-    max-width: 100%;
-    height: 280px;
-  }
-  .author-footer.bg-brand-primary .thank-you-hero__image-wrapper {
-    height: 220px;
-  }
-  .thank-you-hero.bg-brand-secondary .author-footer__social-link {
-    width: 40px;
-    height: 40px;
-  }
-}
+
 @media (max-width: 576px) {
   .thank-you-hero {
-    padding: 30px 0 50px 0;
-  }
-  .thank-you-hero__secondary-buttons {
-    justify-content: center;
-    gap: 10px;
-  }
-  .thank-you-hero__btn-secondary {
-    min-width: 130px;
-    height: 52px;
-    font-size: 14px;
-  }
-  .thank-you-hero.bg-brand-secondary .thank-you-hero__image-wrapper {
-    /* max-width: 280px; */
-    max-width: 100%;
-    height: 240px; /* min-height: 420px; */
-  }
-  .author-footer.bg-brand-primary .thank-you-hero__image-wrapper {
-    height: 200px;
-  }
-  .thank-you-hero.bg-brand-secondary .author-footer__social-link {
-    width: 36px;
-    height: 36px;
+    padding: 40px 0 50px;
   }
 }

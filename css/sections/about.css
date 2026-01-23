@@ -2,35 +2,34 @@
   max-width: 576px;
 }
 
-/* ИЗМЕНЕНИЕ: вместо фикс 650x573 — “умная” рамка (меньше на десктопе) */
 .about-photo {
   background-color: var(--color-frame-bg, #f8f8f8);
   border-radius: 10px;
-  overflow: hidden; /* ИЗМЕНЕНИЕ: ничего не вылазит */
+  overflow: hidden; /*  не вылазит */
 
   width: 100%;
-  max-width: 520px; /* ИЗМЕНЕНИЕ: рамка меньше на десктопе */
-  margin-left: auto; /* остаётся справа */
+  max-width: 520px; 
+  margin-left: auto; /* справа */
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 40px 22px 28px; /* ИЗМЕНЕНИЕ: компактнее */
-  gap: 16px; /* ИЗМЕНЕНИЕ: меньше расстояние */
+  padding: 40px 22px 28px; /* компактнее */
+  gap: 16px; /*  меньше расстояние */
 }
 
-/* ИЗМЕНЕНИЕ: фото не фиксируем px — оно резиновое и меньше */
+/* фото не фиксируем px и меньше */
 .about-photo img {
   width: 100%;
-  max-width: 440px; /* ИЗМЕНЕНИЕ: фото меньше внутри рамки */
+  max-width: 440px; 
   height: auto;
-  aspect-ratio: 551 / 426; /* держим пропорции макета */
+  aspect-ratio: 551 / 426; /* пропорции макета */
 
   display: block;
   border-radius: 10px;
   object-fit: cover;
-  object-position: center; /* если режет верх — см. ниже */
+  object-position: center; 
 }
 
 .about-photo p {
@@ -39,14 +38,14 @@
   color: var(--brand-gold, #e2c08d);
 }
 
-/* <= 991px: фото сверху, рамка по ширине колонки */
+
 @media (max-width: 991px) {
   .about-content {
     max-width: none;
   }
 
   .about-photo {
-    max-width: 650px; /* ИЗМЕНЕНИЕ: можно больше на планшете */
+    max-width: 650px; /* можно больше на планшете */
     margin-left: 0;
     margin-right: 0;
     padding: 24px;
@@ -54,14 +53,14 @@
   }
 
   .about-photo img {
-    max-width: none; /* ИЗМЕНЕНИЕ: фото занимает ширину рамки */
+    max-width: none; /*  фото занимает ширину рамки */
   }
 }
 
-/* <= 576px: рамка “на всю видимую ширину”, как в других секциях */
+
 @media (max-width: 576px) {
   .about-photo {
-    margin-left: -12px; /* ИЗМЕНЕНИЕ: без calc */
+    margin-left: -12px; 
     margin-right: -12px;
     max-width: none;
   }

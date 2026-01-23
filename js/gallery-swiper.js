@@ -1,82 +1,3 @@
-// (function () {
-//   function initGallerySwiper() {
-//     var gallerySection = document.querySelector('.gallery');
-//     if (!gallerySection) return;
-
-//     var swiperEl = gallerySection.querySelector('.gallery-swiper');
-//     if (!swiperEl) return;
-
-//     if (typeof Swiper === 'undefined') return;
-
-//     // ИЗМЕНЕНИЕ: скопили элементы управления внутри секции
-//     var nextBtn = gallerySection.querySelector('.swiper-button-next');
-//     var prevBtn = gallerySection.querySelector('.swiper-button-prev');
-//     var paginationEl = gallerySection.querySelector('.swiper-pagination');
-
-//     var swiperConfig = {
-//       // ИЗМЕНЕНИЕ: всегда один слайд (как на макете)
-//       slidesPerView: 1,
-//       spaceBetween: 0,
-//       loop: true,
-//       grabCursor: true,
-
-//       // оставляем на будущее (в CSS скрыто)
-//       pagination: paginationEl
-//         ? { el: paginationEl, clickable: true }
-//         : undefined,
-
-//       navigation:
-//         nextBtn && prevBtn ? { nextEl: nextBtn, prevEl: prevBtn } : undefined,
-//     };
-
-//     new Swiper(swiperEl, swiperConfig);
-//   }
-
-//   if (document.readyState === 'loading') {
-//     document.addEventListener('DOMContentLoaded', initGallerySwiper);
-//   } else {
-//     initGallerySwiper();
-//   }
-// })();
-
-// (function () {
-//   function initGallerySwiper() {
-//     var gallerySection = document.querySelector('.gallery');
-//     if (!gallerySection) return;
-
-//     var swiperEl = gallerySection.querySelector('.gallery-swiper');
-//     if (!swiperEl) return;
-
-//     if (typeof Swiper === 'undefined') return;
-
-//     // элементы управления ВНУТРИ секции
-//     var nextBtn = gallerySection.querySelector('.swiper-button-next');
-//     var prevBtn = gallerySection.querySelector('.swiper-button-prev');
-//     var paginationEl = gallerySection.querySelector('.swiper-pagination');
-
-//     var swiperConfig = {
-//       slidesPerView: 1,     // 1 фото на экран (как на макете)
-//       spaceBetween: 0,      // без “зазора”
-//       loop: true,
-//       grabCursor: true,
-
-//       // ИЗМЕНЕНИЕ: если вдруг слайдов мало — отключит управление сам
-//       watchOverflow: true,
-
-//       pagination: paginationEl ? { el: paginationEl, clickable: true } : false,
-//       navigation: nextBtn && prevBtn ? { nextEl: nextBtn, prevEl: prevBtn } : false,
-//     };
-
-//     new Swiper(swiperEl, swiperConfig);
-//   }
-
-//   if (document.readyState === 'loading') {
-//     document.addEventListener('DOMContentLoaded', initGallerySwiper);
-//   } else {
-//     initGallerySwiper();
-//   }
-// })();
-
 (function () {
   function initGallerySingle() {
     var sections = document.querySelectorAll('.gallery');
@@ -92,7 +13,7 @@
       var currentIndex = 0;
 
       function show(index) {
-        // ИЗМЕНЕНИЕ: всегда только 1 видимый слайд
+        // всегда только 1 видимый слайд
         slides.forEach(function (slide, i) {
           slide.hidden = i !== index;
         });

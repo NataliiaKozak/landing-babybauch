@@ -5,7 +5,6 @@
 .quiz-header {
   padding: 24px 0 8px 0; /* компактнее */
   min-height: auto;
-  width: 100%;
 }
 
 .quiz-header__content {
@@ -13,20 +12,14 @@
   flex-direction: column;
   gap: 10px; /* было 40/80 */
   align-items: flex-start;
-  /* padding: 24px 0 10px; */
-  padding-top: 12px;   /* было больше */
-  padding-bottom: 0px;
 }
 
 /* Logo */
 .quiz-header__logo {
   margin: 0; /* было 0 0 10px 0 */
-   margin-bottom: 0;
 }
 
 .quiz-header__logo-text {
-  font-size: var(--font-h2); /* 45px */
-  font-weight: var(--font-weight-bold);
   text-decoration: none;
   color: var(--brand-text);
   transition: opacity 0.3s ease;

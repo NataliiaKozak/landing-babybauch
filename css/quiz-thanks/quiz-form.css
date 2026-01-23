@@ -108,60 +108,63 @@
 /* RIGHT: фото — БЕЗ обрезки и БЕЗ "полос" */
 .quiz-form__sidebar {
   display: flex;
-  justify-content: flex-end; /* как на макете: справа */
+  justify-content: center; 
 }
 
 .quiz-form__image-wrapper {
   width: 100%;
-  max-width: 520px; /* гармонично по макету */
+  max-width: 520px; 
 }
 
-/* ключ: фото само задаёт пропорции, но мы ограничиваем высоту */
+/*  фото само задаёт пропорции, ограничиваем высоту */
 .quiz-form__image {
   display: block;
 
   max-width: 100%;
-  width: auto; /* важно: чтобы при ограничении высоты не тянулось в ширину */
+  width: auto; /* при ограничении высоты не тянулось в ширину */
   height: auto;
 
-  max-height: 560px; /* чтобы на десктопе не было слишком высоким */
-  border-radius: 12px;
-
-  margin-left: auto; /* держим справа */
+  max-height: 560px; 
+  border-radius: 10px;
+  margin: 0 auto; 
 }
 
-/* ============================================================================
-   <= 991px: уже колонки (Bootstrap), фото по центру и меньше по высоте
-   ============================================================================ */
+.quiz-header .container {
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+}
+
 @media (max-width: 991px) {
   .quiz-form {
     padding: 18px 0 36px 0;
   }
 
   .quiz-form__content {
-    max-width: 560px;
-    margin-left: auto;
+    max-width: 520px;
+    margin-left: 0;
     margin-right: auto;
+    text-align: left;
   }
 
+  .quiz-form__submit.btn-primary-custom {
+    align-self: flex-start;
+  }
   .quiz-form__sidebar {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .quiz-form__image-wrapper {
-    max-width: 560px;
+    max-width: 520px;
+    width: 100%;
   }
 
   .quiz-form__image {
-    margin-left: 0; /* центр */
+    margin-left: 0; 
     margin-right: 0;
-    max-height: 440px; /* компактнее */
+    max-height: 440px; 
   }
 }
 
-/* ============================================================================
-   <= 576px: ещё компактнее, без кропа, без полос
-   ============================================================================ */
 @media (max-width: 576px) {
   .quiz-form__input {
     max-width: 100%;
@@ -176,6 +179,6 @@
   }
 
   .quiz-form__image {
-    max-height: 360px; /* уменьшаем "объём" фото на моб */
+    max-height: 360px; 
   }
 }

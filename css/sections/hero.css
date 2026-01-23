@@ -13,12 +13,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px; /* ИЗМЕНЕНИЕ: компактнее */
+  gap: 28px; /* компактнее */
 }
 
 .hero-center {
   flex: 1;
-  max-width: 420px; /* ИЗМЕНЕНИЕ: центр чуть уже */
+  max-width: 420px; /* центр чуть уже */
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   color: var(--brand-text);
 }
 
-/* ИЗМЕНЕНИЕ: фото на десктопе меньше, чтобы не доминировали */
+/*  фото на десктопе меньше, чтобы не доминировали */
 .hero-side {
   flex: 0 0 230px; /* было 300 */
   display: flex;
@@ -45,15 +45,15 @@
 }
 
 .hero-photo--side {
-  width: 380px; /* ИЗМЕНЕНИЕ */
-  height: 600px; /* ИЗМЕНЕНИЕ */
+  width: 380px; 
+  height: 600px; 
 }
 
-/* ===== <= 991px: фото во всю видимую ширину ===== */
+
 @media (max-width: 991px) {
   .hero-layout {
     flex-direction: column;
-    align-items: stretch; /* ИЗМЕНЕНИЕ: растягиваем */
+    align-items: stretch; /* растянуть */
     gap: 18px;
   }
 
@@ -64,8 +64,6 @@
   .hero-side {
     flex: 0 0 auto;
     width: auto;
-
-    /* ИЗМЕНЕНИЕ: “в край экрана” без calc */
     margin-left: -12px;
     margin-right: -12px;
   }
@@ -73,20 +71,17 @@
   .hero-photo--side {
     width: 100%;
     height: auto;
-
-    /* ПРЕДПОЛОЖЕНИЕ: держим пропорции из Figma 365x462 */
-    aspect-ratio: 365 / 462;
+    aspect-ratio: 365 / 462;    /* держим пропорции из Figma 365x462 */
   }
 }
 
-/* ===== <= 576px: можно сделать чуть компактнее по высоте ===== */
+
 @media (max-width: 576px) {
   .hero {
     min-height: auto;
   }
 
   .hero-photo--side {
-    /* ПРЕДПОЛОЖЕНИЕ: если слишком “высоко”, делаем чуть ниже */
-    aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 5;/* если слишком “высоко”, делаем чуть ниже */
   }
 }
