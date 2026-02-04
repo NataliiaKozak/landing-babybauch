@@ -196,12 +196,11 @@ async function submitToGoogleSheets(data) {
     availability: data.availability,
     privacy_accepted: data.privacy ? 'Ja' : 'Nein',
 
-    q1_welches: data.quizAnswers?.q1 || '',
-    q2_termin_baby: data.quizAnswers?.q2 || '',
-    q3_kleider: data.quizAnswers?.q3 || '',
-    q4_wen: data.quizAnswers?.q4 || '',
-
-    q5_kennst: data.quizAnswers?.q5 || '',
+    q1: data.quizAnswers?.q1 || '',
+    q2: data.quizAnswers?.q2 || '',
+    q3: data.quizAnswers?.q3 || '',
+    q4: data.quizAnswers?.q4 || '',
+    q5: data.quizAnswers?.q5 || '',
 
     quiz_start_time: data.quizStartTime || '',
   };

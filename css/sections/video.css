@@ -3,17 +3,33 @@
 .video {
   width: 100%;
   overflow: hidden;
+  padding: 56px 0;
 }
 
 .video__wrapper {
   position: relative;
+  width: 100%;
+  border-radius: 10px;   
+  overflow: hidden;      /* обрезает углы iframe */
+  background: var(--color-gray); /* аккуратный фон на время загрузки */
+  aspect-ratio: 16 / 9;  /* стабильная пропорция на всех экранах */
 }
 
 /* iframe как блок, без рамки */
-.video__embed {
+/* .video__embed {
   width: 100%;
   max-height: 950px;
   height: 520px; 
+  display: block;
+  border: 0;
+} */
+
+/* iframe растягиваем на всю площадь wrapper */
+.video__embed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: block;
   border: 0;
 }
@@ -26,6 +42,13 @@
 }
 
 @media (max-width: 768px) {
+  .video {
+    padding: 44px 0;
+  }
+
+  .video__wrapper {
+    aspect-ratio: 4 / 3; /* визуально ближе к макету, блок "выше" */
+  }
   .video__embed {
     max-height: 500px;
     height: 360px;
