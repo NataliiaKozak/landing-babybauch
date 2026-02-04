@@ -1,64 +1,48 @@
-/* Full Width Video Section Styles */
+/* ============================================================================
+   VIDEO SECTION
+   - без чёрных/серых полос на любых ширинах
+   - аккуратные скругления
+   - видео всегда ровно “в коробке” контейнера
+   ============================================================================ */
 
 .video {
   width: 100%;
-  overflow: hidden;
   padding: 56px 0;
 }
 
+/* Контейнер для iframe: держит пропорции и скругления */
 .video__wrapper {
   position: relative;
   width: 100%;
+  aspect-ratio: 16 / 9; /* пропорции всегда стабильные */
   border-radius: 10px;
-  overflow: hidden; /* обрезает углы iframe */
-  background: var(--color-gray); /* аккуратный фон на время загрузки */
-  aspect-ratio: 16 / 9; /* стабильная пропорция на всех экранах */
+  overflow: hidden;
+  background: #000; /* пока YouTube грузится — не будет серых “дыр” */
 }
 
-/* iframe как блок, без рамки */
-/* .video__embed {
-  width: 100%;
-  max-height: 950px;
-  height: 520px; 
-  display: block;
-  border: 0;
-} */
-
-/* iframe растягиваем на всю площадь wrapper */
+/* iframe заполняет контейнер полностью */
 .video__embed {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+  top: -1px; /* убираем тонкую линию/шов по краям */
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+
   border: 0;
+  display: block;
 }
 
-@media (max-width: 991px) {
-  .video__embed {
-    max-height: 600px;
-    height: 420px;
-  }
-}
-
-@media (max-width: 768px) {
-  .video__embed {
-    max-height: 500px;
-    height: 360px;
-    min-height: 0;
-  }
-}
-
-@media (max-width: 576px) {
-  .video {
-    padding: 44px 0;
-  }
-
+/* Fallback для старых браузеров без aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
   .video__wrapper {
-    aspect-ratio: 4 / 3; /* визуально ближе к макету, блок "выше" */
+    height: 0;
+    padding-top: 56.25%; /* 16:9 */
   }
+
   .video__embed {
-    max-height: 350px;
-    height: 260px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
