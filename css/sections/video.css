@@ -9,10 +9,10 @@
 .video__wrapper {
   position: relative;
   width: 100%;
-  border-radius: 10px;   
-  overflow: hidden;      /* обрезает углы iframe */
+  border-radius: 10px;
+  overflow: hidden; /* обрезает углы iframe */
   background: var(--color-gray); /* аккуратный фон на время загрузки */
-  aspect-ratio: 16 / 9;  /* стабильная пропорция на всех экранах */
+  aspect-ratio: 16 / 9; /* стабильная пропорция на всех экранах */
 }
 
 /* iframe как блок, без рамки */
@@ -42,13 +42,6 @@
 }
 
 @media (max-width: 768px) {
-  .video {
-    padding: 44px 0;
-  }
-
-  .video__wrapper {
-    aspect-ratio: 4 / 3; /* визуально ближе к макету, блок "выше" */
-  }
   .video__embed {
     max-height: 500px;
     height: 360px;
@@ -57,6 +50,13 @@
 }
 
 @media (max-width: 576px) {
+  .video {
+    padding: 44px 0;
+  }
+
+  .video__wrapper {
+    aspect-ratio: 4 / 3; /* визуально ближе к макету, блок "выше" */
+  }
   .video__embed {
     max-height: 350px;
     height: 260px;
